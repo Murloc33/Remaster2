@@ -1,0 +1,11 @@
+#ifndef SHARED_DEFS_H
+#define SHARED_DEFS_H
+
+enum {
+    INTRO_PAGE,
+    MIDDLE_PAGE_PATH_1,
+    MIDDLE_PAGE_PATH_2,
+    FINAL_PAGE,
+};
+
+#endif // SHARED_DEFS_H
