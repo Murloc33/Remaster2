@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/resources">
-        <file>Вставленное изображение.png</file>
+        <file>icons/close.svg</file>
+        <file>icons/done.svg</file>
     </qresource>
 </RCC>

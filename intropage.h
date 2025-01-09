@@ -3,6 +3,9 @@
 
 #include <QWizardPage>
 
+#include "datahandler.h"
+#include "shared_defs.h"
+
 namespace Ui {
 	class IntroPage;
 }
@@ -16,19 +19,19 @@ class IntroPage : public QWizardPage
 public:
 	explicit IntroPage(QWidget *parent = nullptr);
 	void initializePage();
+	bool validatePage();
+	int nextId() const;;
 	~IntroPage();
 
 private:
-	void fillCompetitionStatus();
 	void fillAgeGroup();
+	void clearErros();
+	void slotUpdate(int in);
 
 private:
-	Ui::IntroPage *ui;
-
-
-public:
-	bool validatePage();
-	int nextId() const;
+	Ui::IntroPage	*ui;
+	bool			m_isModified = false;
+	QVector<Error>	m_errors;
 };
 
 #endif // INTROPAGE_H

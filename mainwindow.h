@@ -7,6 +7,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+#include <QWizard>
+
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT
@@ -16,6 +18,7 @@ public:
 	~MainWindow();
 
 private:
-	Ui::MainWindow *ui;
+	Ui::MainWindow	*ui;
+	QWizard			*m_wizard;
 };
 #endif // MAINWINDOW_H
